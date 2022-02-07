@@ -71,17 +71,17 @@ CREATE TABLE iotjetsonjson
 
 CREATE TABLE default_catalog.default_database.iotjetsonjson2
 (
-  publishTime TIMESTAMP(3) METADATA,
-  WATERMARK FOR publishTime AS publishTime - INTERVAL '5' SECOND
-) WITH (
-  'connector' = 'pulsar',
-  'topic' = 'persistent://public/default/iotjetsonjson',
-  'value.format' = 'json',
-  'scan.startup.mode' = 'earliest',
-  'service-url' = 'pulsar://pulsar1:6650',
-  'admin-url' = 'http://pulsar1:8080'
-)
-like 'iotjetsonjson';
+   publishTime TIMESTAMP(3) METADATA,
+   WATERMARK FOR publishTime AS publishTime - INTERVAL '5' SECOND
+ ) WITH (
+   'connector' = 'pulsar',
+   'topic' = 'persistent://public/default/iotjetsonjson',
+   'value.format' = 'json',
+   'scan.startup.mode' = 'earliest',
+   'service-url' = 'pulsar://pulsar1:6650',
+   'admin-url' = 'http://pulsar1:8080'
+ )
+ like iotjetsonjson;
 
 # Pulsar SQL
 
