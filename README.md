@@ -17,7 +17,7 @@ Some FLiPN Demos
 
 ### Example Run
 
-````
+````sql
 
 
 # Scylla Query
@@ -93,3 +93,10 @@ select max(gputempf) as maxgputempf, max(cputemp) as maxcputemp, max(memory) as 
 
 
 ````
+
+# NodeJS Native Client (Pulsar-Flex)
+
+```sh
+npm install pulsar-flex
+```
+
